@@ -43,7 +43,8 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
+              "src/service-worker.js",
+              "src/manifest.json",
               "src/error.html",
               "src/assets"
             ],

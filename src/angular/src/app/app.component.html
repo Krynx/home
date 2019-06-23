@@ -3,9 +3,17 @@
     <a class="navbar-item" href="https://krynx.dev">
       <img src="assets/logo.png" width="112" height="28">
     </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="krynx-navbar-menu"
+        [class.is-active]="showMenu" (click)="toggleMenu()">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
   </div>
 
-  <div class="navbar-menu">
+  <div class="navbar-menu" id="krynx-navbar-menu"
+      [class.is-active]="showMenu" (click)="toggleMenu()">
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">

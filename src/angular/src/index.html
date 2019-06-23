@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" class="has-navbar-fixed-top">
   <head>
-    <meta charset="utf-8">
     <title>Krynx.dev</title>
     <base href="/">
 
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="assets/icon.png">
+    <meta name="description" content="Krynx.dev">
+    <meta name="theme-color" content="#f5f5f5">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Krynx.dev">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" sizes="192x192" type="image/png" href="assets/icon-192.png">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
   </head>
   <body>
     <krynx-root></krynx-root>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+    </script>
   </body>
 </html>
